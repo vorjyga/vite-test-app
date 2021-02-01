@@ -1,6 +1,6 @@
 .down-up-leave-active,
 .down-up-enter-active {
-    transition: all .5s linear;
+    transition: all .2s linear;
     overflow-y: hidden;
     position: absolute;
 }
@@ -23,7 +23,7 @@
 
 .up-down-enter-active,
 .up-down-leave-active {
-    transition: transform .5s linear;
+    transition: transform .2s linear;
     overflow-y: hidden;
     position: absolute;
 
@@ -47,7 +47,7 @@
 
 .slide-right-leave-active,
 .slide-right-enter-active {
-    transition: transform .5s linear;
+    transition: transform .2s linear;
 }
 
 .slide-right-enter-active {
@@ -74,7 +74,7 @@
 
 .slide-left-leave-active,
 .slide-left-enter-active {
-    transition: transform .5s linear;
+    transition: transform .2s linear;
 }
 
 .slide-left-enter-active {

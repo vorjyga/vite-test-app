@@ -19,20 +19,33 @@ export default {
     parentClass() {
       return this.transition === transitionsType.upDown
       || this.transition === transitionsType.downUp
-          ? '' : 'flex flex-row flex-nowrap';
+          ? 'app' : 'app flex flex-row flex-nowrap';
     }
   },
-
+  mounted() {
+    const appHeight = () => document.documentElement.style
+        .setProperty('--app-height', `${window.innerHeight}px`)
+    window.addEventListener('resize', appHeight)
+    appHeight()
+  }
 }
 </script >
 
 <style >
+html, body {
+  height: 100%;
+}
+.app {
+  height: 100%;
+}
 .window-container {
-  @apply container mx-auto flex flex-col justify-between content-between flex-1 h-screen;
+  @apply container mx-auto flex flex-col justify-between content-between;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: var(--app-height);
 }
 
 .form-block {
-  @apply flex flex-col flex-nowrap justify-center content-center text-left m-4 mb-10;
+  @apply flex flex-col flex-nowrap justify-center content-center text-left m-4 mb-3;
 }
 
 .form-element {

@@ -1,5 +1,5 @@
 <template >
-  <div class="window-container text-center">
+  <div class="window-container text-center" ref="container">
     <div class="flex flex-col">
       <img
           alt="Success"

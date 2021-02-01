@@ -54,5 +54,4 @@ router.beforeEach((to, from) => {
     const fromDepth = from.meta.deep;
     to.meta.transitionName = toDepth < fromDepth ? transitionsType.rightLeft : transitionsType.leftRight;
   }
-  console.log('transitionName:', to.meta.transitionName);
 })

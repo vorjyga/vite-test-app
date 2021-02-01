@@ -1,5 +1,5 @@
 <template >
-  <div class="window-container">
+  <div class="window-container" ref="container">
     <div class="mb-12 flex-initial border-solid border-4 border-black p-4 flex justify-between">
       <div @click="goBack">
         back
@@ -71,7 +71,7 @@ export default {
         path: '/new-contact',
       })
     }
-  }
+  },
 }
 </script >
 

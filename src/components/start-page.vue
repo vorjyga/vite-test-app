@@ -1,6 +1,6 @@
 <template >
-  <div class="window-container">
-    <div class="mb-12 flex-initial">
+  <div class="window-container" ref="container">
+    <div class="mb-5 flex-initial">
       <h1 class="text-center font-bold font">
         Make a payment
       </h1 >
@@ -42,7 +42,6 @@
 <script >
 import {mapGetters, mapMutations} from "vuex";
 import GroundButton from '../view/ground-button.vue'
-import {transitionsType} from "../constants/transitions.js";
 
 
 export default {
@@ -68,7 +67,7 @@ export default {
         path: '/contacts'
       })
     },
-  }
+  },
 }
 </script >
 
